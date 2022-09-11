@@ -1,10 +1,11 @@
 import { getFeaturedEvents } from "../dummy-data";
+import RecipeList from "../components/recipes/recipe-list";
 
 function HomePage() {
-    const featuredEvents = getFeaturedEvents();
+  const featuredRecipes = getFeaturedEvents();
   return (
     <div>
-      <ul></ul>
+      <RecipeList items={featuredRecipes} />
     </div>
   );
 }
