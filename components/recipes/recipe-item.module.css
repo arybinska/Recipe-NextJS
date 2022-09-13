@@ -10,9 +10,13 @@
 }
 
 .item img {
-  width: 100%;
+  width: 80%;
   object-fit: cover;
-  height: 10rem;
+  height: 8rem;
+}
+
+.summary {
+  height: 60%;
 }
 
 .content {
@@ -26,14 +30,14 @@
 }
 
 .date,
-.address {
+.people {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
 .date svg,
-.address svg {
+.people svg {
   width: 1.25rem;
   height: 1.25rem;
   color: #666666;
@@ -42,12 +46,6 @@
 .content time {
   color: #666666;
   font-weight: bold;
-}
-
-.content address {
-  margin: 0.5rem 0;
-  color: #666666;
-  white-space: pre;
 }
 
 .actions {

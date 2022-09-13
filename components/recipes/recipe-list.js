@@ -10,7 +10,7 @@ function RecipeList(props) {
           key={recipe.id}
           id={recipe.id}
           title={recipe.title}
-          location={recipe.location}
+          people={recipe.people}
           date={recipe.date}
           image={recipe.image}
         />

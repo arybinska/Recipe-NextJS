@@ -1,57 +1,57 @@
-const DUMMY_EVENTS = [
+const DUMMY_RECIPES = [
   {
-    id: "e1",
-    title: "Programming for everyone",
+    id: "r1",
+    title: "KURCZAK W SOSIE Z CUKINIĄ I GORGONZOLĄ",
     description:
-      "Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.",
-    location: "Somestreet 25, 12345 San Somewhereo",
-    date: "2021-05-12",
-    image: "images/coding-event.jpg",
-    isFeatured: false,
-  },
-  {
-    id: "e2",
-    title: "Networking for introverts",
-    description:
-      "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
-    location: "New Wall Street 5, 98765 New Work",
-    date: "2021-05-30",
-    image: "images/introvert-event.jpg",
+      "Aromatyczny kurczak w sosie z cukinią i gorgonzolą . PRZYGOTOWANIE Kurczaka oczyścić z błonek i kostek, pokroić na mniejsze filety: odkroić polędwiczkę - ruchomą część filetu, następnie filet przekroić wzdłuż na 2 cieńsze części. Rozbić tłuczkiem na jednakową grubość, ok. 1 cm. Doprawić solą oraz pieprzem. Cukinię przyciąć na końcach i pokroić w niedużą kostkę. Filety delikatnie obtoczyć w mące. Rozgrzać patelnię z oliwą lub olejem. Włożyć filety kurczaka, podsmażać po ok. 2 minuty z każdej strony. Odłożyć na talerz. Na tę samą patelnię wrzucić cukinię i smażyć co chwilę mieszając przez ok. 3 - 4 minuty. W międzyczasie dodać masło. Dodać całe mięso na patelnię i wsunąć ją miejscami pod cukinię. Trzymając danie na ogniu wlać bulion, dodać kurkumę, koperek i szczypiorek. Wymieszać i zagotować. Po chwili wlać śmietankę i delikatnie przemieszać składniki. Posypać posiekaną gorgonzolą. Doprawić w razie potrzeby solą i pieprzem i gotować jeszcze przez minutę.",
+    people: "4",
+    date: "2022-09-13",
+    image: "images/kurczak_w_sosie_z_cukinia_gorgonzola.jpg",
     isFeatured: true,
   },
   {
-    id: "e3",
-    title: "Networking for extroverts",
+    id: "r2",
+    title: "ZIELONE CURRY Z KREWETKAMI",
     description:
-      "You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.",
-    location: "My Street 12, 10115 Broke City",
-    date: "2022-04-10",
-    image: "images/extrovert-event.jpg",
+      "Tajskie curry z mlekiem koksowym i krewetkami z dodatkiem cukinii, bakłażana oraz szpinaku. Błyskawiczne do przygotowania, ale wymagające skompletowania dodatków charakterystycznych dla kuchni tajskiej.",
+    people: "4",
+    date: "2022-09-13",
+    image: "images/zielone_curry_z_krewetkami.jpg",
+    isFeatured: true,
+  },
+  {
+    id: "r3",
+    title: "CIASTO NA PIZZE",
+    description:
+      "Najlepszy przepis na ciasto na pizze",
+    people: "6",
+    date: "2022-09-13",
+    image: "images/pizza.jpg",
     isFeatured: true,
   },
 ];
 
-export function getFeaturedEvents() {
-  return DUMMY_EVENTS.filter((event) => event.isFeatured);
+export function getFeaturedRecipes() {
+  return DUMMY_RECIPES.filter((recipe) => recipe.isFeatured);
 }
 
-export function getAllEvents() {
-  return DUMMY_EVENTS;
+export function getAllRecipes() {
+  return DUMMY_RECIPES;
 }
 
-export function getFilteredEvents(dateFilter) {
+export function getFilteredRecipes(dateFilter) {
   const { year, month } = dateFilter;
 
-  let filteredEvents = DUMMY_EVENTS.filter((event) => {
-    const eventDate = new Date(event.date);
+  let filteredRecipes = DUMMY_RECIPES.filter((recipe) => {
+    const recipeDate = new Date(recipe.date);
     return (
-      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
+      recipeDate.getFullYear() === year && recipeDate.getMonth() === month - 1
     );
   });
 
-  return filteredEvents;
+  return filteredRecipes;
 }
 
-export function getEventById(id) {
-  return DUMMY_EVENTS.find((event) => event.id === id);
+export function getRecipeById(id) {
+  return DUMMY_RECIPES.find((recipe) => recipe.id === id);
 }
