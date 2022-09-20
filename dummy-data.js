@@ -5,7 +5,7 @@ const DUMMY_RECIPES = [
     description:
       "Aromatyczny kurczak w sosie z cukinią i gorgonzolą . PRZYGOTOWANIE Kurczaka oczyścić z błonek i kostek, pokroić na mniejsze filety: odkroić polędwiczkę - ruchomą część filetu, następnie filet przekroić wzdłuż na 2 cieńsze części. Rozbić tłuczkiem na jednakową grubość, ok. 1 cm. Doprawić solą oraz pieprzem. Cukinię przyciąć na końcach i pokroić w niedużą kostkę. Filety delikatnie obtoczyć w mące. Rozgrzać patelnię z oliwą lub olejem. Włożyć filety kurczaka, podsmażać po ok. 2 minuty z każdej strony. Odłożyć na talerz. Na tę samą patelnię wrzucić cukinię i smażyć co chwilę mieszając przez ok. 3 - 4 minuty. W międzyczasie dodać masło. Dodać całe mięso na patelnię i wsunąć ją miejscami pod cukinię. Trzymając danie na ogniu wlać bulion, dodać kurkumę, koperek i szczypiorek. Wymieszać i zagotować. Po chwili wlać śmietankę i delikatnie przemieszać składniki. Posypać posiekaną gorgonzolą. Doprawić w razie potrzeby solą i pieprzem i gotować jeszcze przez minutę.",
     people: "4",
-    date: "2022-09-13",
+    date: "2022-09-12",
     image: "images/kurczak_w_sosie_z_cukinia_gorgonzola.jpg",
     isFeatured: true,
   },

@@ -6,6 +6,7 @@ import RecipeLogistics from "../../components/recipe-detail/recipe-logistics";
 import RecipeContent from "../../components/recipe-detail/recipe-content";
 
 import { getRecipeById } from "../../dummy-data";
+import ErrorAlert from "../../components/ui/error-alert";
 
 function RecipeDetailPage() {
   const router = useRouter();
@@ -14,7 +15,11 @@ function RecipeDetailPage() {
   const recipe = getRecipeById(recipeId);
 
   if (!recipe) {
-    return <p>No recipe found!</p>;
+    return (
+      <ErrorAlert>
+        <p>No recipe found!</p>
+      </ErrorAlert>
+    );
   }
 
   return (
