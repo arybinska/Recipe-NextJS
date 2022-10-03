@@ -1,0 +1,46 @@
+Przydatne komendy:
+1. Rozpoczęcie projektu : npx create-next-app
+2. npm install
+3. Routing in NextJS
+- będziemy tworzyć ścieżki w folderze /pages
+( w nim index.js prowadzi do strony domena.com/ ; about.js do domena.com/about)
+- niżej /products
+(w nim index.js prowadzi do domena.com/products; [id].js do domena.com/products/1 jest to routing dynamiczny)
+4. By tworzyć dynamiczny routing należy
+import { useRouter } from 'next/router'
+
+W środku funckji : const router = useRouter();
+
+wartość query daje nam informację co zostało napisane w URL
+
+Można też tworzyć dynamiczne foldery np [id]
+gdy w nazwie mamy [...nazwa] to ścieżka może zawierać więcej niż jeden element. Wtedy w query mamy nazwa: ["el1", "el2"]
+wtedy możemy te dane wysyłać do bazy i odczytywać odpowiednie dane
+
+5. linki w Next.js :
+
+import Link from 'next/link'
+
+<Link href="/blog">Cos</Link>
+
+6. Zamiast pisać tak :
+<Link href={`/clients/${client.id}`}>{client.name}</Link>
+Możemy w NextJS :
+<Link href={{ pathname: "/clients/[id]", query: { id: client.id } }}>{client.name}</Link>
+
+7. useRouter ma funkcję jak push, która wysyła do odpowiedniej ścieżki/ URL
+
+8. Gdy chcemy stworzyć stronę 404 (error) to tworzymy w folderze pages plik 404.js
+
+9. NextJs helps with building "fullstack React apps"
+
+10. umożliwia SSR = server-side rendering. Jest zdolny do prerenderingu strony.
+
+11. Mamy 2 rodzaje pre-renderingu :
+a) static generation (all the pages are pre-generated)
+- pages are prepared ahead to time and can be cached by the server
+- only for inside the component files we can export the special async function getStaticProps
+export async function getStaticProps(context) {...}
+we can add here any code which we would normally run on the server side only - plus: client don't see this code
+(we don't run the client side code)
+b) server-side rendering (pages are created just in time)
